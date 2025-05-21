@@ -77,6 +77,7 @@ https://templatemo.com/tm-558-klassy-cafe
                                 <ul>
                                     <li><a href="#">Login</a></li>
                                     <li><a href="#">Register</a></li>
+                                    <li><a href="#">Info</a></li>
                                 </ul>
                             </li>
                             <!-- <li class=""><a rel="sponsored" href="https://templatemo.com" target="_blank">External URL</a></li> -->
