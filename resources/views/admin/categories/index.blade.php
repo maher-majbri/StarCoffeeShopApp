@@ -14,6 +14,7 @@
                 <tr>
                     <th>الاسم</th>
                     <th>ترتيب العرض</th>
+                    <ht>العمليات</ht>
                 </tr>
             </thead>
             <tbody>
@@ -21,6 +22,14 @@
                     <tr>
                         <td>{{ $category->name }}</td>
                         <td>{{ $category->display_order }}</td>
+                        <td>
+                            <a class="btn btn-warning" href="{{ route('admin.categories.edit', $category->id)  }}" >تعديل</a>
+                            <form  action="{{ route('admin.categories.destroy', $category->id) }}" method="POST" style="display: inline;">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this category?')">حذف</button>
+                            </form>
+                        </td>
                     </tr>
                 @endforeach
             </tbody>

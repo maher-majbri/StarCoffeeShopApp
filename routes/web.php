@@ -14,7 +14,7 @@ Route::post('/review/store',  [ReviewController::class,'store'] )->name('store.r
 
 
 Route::prefix('admin')->group(function () {
-    Route::resource('categories', categoryController::class)->names([
+    Route::resource('categories', CategoryController::class)->names([
         'index' => 'admin.categories.index',
         'create' => 'admin.categories.create',
         'store' => 'admin.categories.store',
