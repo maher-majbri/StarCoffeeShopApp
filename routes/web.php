@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\ItemController;
 
 Route::get('/',  [HomeController::class,'index'] )->name('home');
 Route::get('/about',  [HomeController::class,'about'] )->name('about');
@@ -21,5 +22,13 @@ Route::prefix('admin')->group(function () {
         'edit' => 'admin.categories.edit',
         'update' => 'admin.categories.update',
         'destroy' => 'admin.categories.destroy',
+    ]);
+      Route::resource('items', ItemController::class)->names([
+        'index' => 'admin.items.index',
+        'create' => 'admin.items.create',
+        'store' => 'admin.items.store',
+        'edit' => 'admin.items.edit',
+        'update' => 'admin.items.update',
+        'destroy' => 'admin.items.destroy',
     ]);
 });

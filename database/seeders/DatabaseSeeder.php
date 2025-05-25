@@ -17,17 +17,17 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        $faker = Faker::create();
-        foreach (range(1, 5) as $index) {
-            DB::table('items')->insert([
-                'name' => $faker->sentence(3),
-                'description' =>  $faker->paragraph(3),
-                'price' =>  $faker->randomFloat(2, 5, 10),
-                'category' => 'Drinks' ,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ]);
-         }
+        // $faker = Faker::create();
+        // foreach (range(1, 5) as $index) {
+        //     DB::table('items')->insert([
+        //         'name' => $faker->sentence(3),
+        //         'description' =>  $faker->paragraph(3),
+        //         'price' =>  $faker->randomFloat(2, 5, 10),
+        //         'category_id' => 1 ,
+        //         'created_at' => now(),
+        //         'updated_at' => now(),
+        //     ]);
+        //  }
 
         // User::factory(10)->create();
 
